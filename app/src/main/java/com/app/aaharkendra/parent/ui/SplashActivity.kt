@@ -1,4 +1,4 @@
-package com.app.aaharkendra.parent.UI
+package com.app.aaharkendra.parent.ui
 
 import android.annotation.SuppressLint
 import android.content.Intent

@@ -1,8 +1,7 @@
-package com.app.aaharkendra.parent.UI
+package com.app.aaharkendra.parent.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.app.aaharkendra.R
 import com.app.aaharkendra.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

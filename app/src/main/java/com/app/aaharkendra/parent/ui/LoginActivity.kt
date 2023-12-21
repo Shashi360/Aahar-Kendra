@@ -1,4 +1,4 @@
-package com.app.aaharkendra.parent.UI
+package com.app.aaharkendra.parent.ui
 
 import android.content.ContentValues.TAG
 import android.content.Intent
@@ -17,7 +17,6 @@ import com.app.aaharkendra.parent.nodalOfficer.NodalOfficerActivity
 
 
 class LoginActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityLoginBinding
     private var selectedDesignation: String = ""
 

@@ -22,10 +22,10 @@
             android:name=".parent.admin.AdminActivity"
             android:exported="false" />
         <activity
-            android:name=".parent.UI.LoginActivity"
+            android:name=".parent.ui.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".parent.UI.SplashActivity"
+            android:name=".parent.ui.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".parent.UI.MainActivity"
+            android:name=".parent.ui.MainActivity"
             android:exported="true" />
     </application>
 
