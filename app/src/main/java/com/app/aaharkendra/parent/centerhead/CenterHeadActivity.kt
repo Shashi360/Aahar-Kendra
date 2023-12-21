@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
+import androidx.fragment.app.Fragment
 import com.app.aaharkendra.R
 import com.app.aaharkendra.databinding.ActivityCenterHeadBinding
 
@@ -36,27 +37,33 @@ class CenterHeadActivity : AppCompatActivity() {
 
         binding.navigationView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.menu_dashboard -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_fragment_container, CenterHeadDashboardFragment())
-                        .commit()
-                    supportActionBar?.title = getString(R.string.centerhead_dashboard)
-                    binding.drawerLayout.closeDrawers()
-                    return@setNavigationItemSelectedListener true
-                }
-
-                R.id.menu_meal_details -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_fragment_container, CenterHeadMealDetailsFragment())
-                        .commit()
-                    supportActionBar?.title = getString(R.string.centerhead_meal_details)
-                    binding.drawerLayout.closeDrawers()
-                    return@setNavigationItemSelectedListener true
-                }
-
-                else -> return@setNavigationItemSelectedListener false
+                R.id.menu_dashboard -> replaceFragmentAndSetTitle(
+                    CenterHeadDashboardFragment(),
+                    R.string.centerhead_dashboard
+                )
+                R.id.menu_meal_details -> replaceFragmentAndSetTitle(
+                    CenterHeadMealDetailsFragment(),
+                    R.string.centerhead_meal_details
+                )
+                R.id.daily_meal_report -> replaceFragmentAndSetTitle(
+                    CenterHeadDailyMealReportFragment(),
+                    R.string.centerhead_daily_meal_report
+                )
+                R.id.monthly_meal_report -> replaceFragmentAndSetTitle(
+                    CenterHeadMonthlyMealReportFragment(),
+                    R.string.centerhead_monthly_meal_report
+                )
+                else -> false
             }
         }
+    }
+    private fun replaceFragmentAndSetTitle(fragment: Fragment, titleResId: Int): Boolean {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.main_fragment_container, fragment)
+            .commit()
+        supportActionBar?.title = getString(titleResId)
+        binding.drawerLayout.closeDrawers()
+        return true
     }
 
     private fun showToast(message: String) {

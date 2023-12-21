@@ -23,7 +23,9 @@
     <string name="center_head_title">Welcome to Center Head</string>
     <string name="center_head_title_fragment">Welcome to Center Head Dashboard Fragment</string>
     <string name="dashboard_menu">Dashboard</string>
-    <string name="meal_details">Meal Details</string>
+    <string name="meal_details">Daily meal data entry</string>
+    <string name="daily_meal_report">Daily meal report</string>
+    <string name="monthly_meal_report">Monthly meal report</string>
 
     <string name="center_head_meal_details">Welcome to Center Head Meal Details</string>
     <string name="center_head_dashboard">This is Center head dashboard</string>
@@ -32,7 +34,15 @@
     <string name="nav_close">Close</string>
 
     <string name="centerhead_dashboard">Dashboard</string>
-    <string name="centerhead_meal_details">Meal details</string>
+    <string name="centerhead_meal_details">Daily meal data entry</string>
+    <string name="centerhead_daily_meal_report">Daily meal report</string>
+    <string name="centerhead_monthly_meal_report">Monthly meal report</string>
+    <string name="day_meal">Day Meal</string>
+    <string name="select_date">Select date here</string>
+    <string name="meal_consumed">Meal Consumed</string>
+    <string name="meal_left_over">Meal Left Over</string>
+    <string name="send_data">Save Day Meal</string>
+    <string name="night_meal">Night Meal</string>
 
     <string-array name="days">
         <item>Monday</item>
@@ -47,5 +57,34 @@
     <string-array name="mode_of_meal">
         <item>Day Meal</item>
         <item>Night Meal</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="show">Show</string>
+    <string name="month">month</string>
+    <string name="year">Year</string>
+
+    <!-- Months -->
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <!-- Years -->
+    <string-array name="years">
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <!-- Add more years as needed -->
     </string-array>
 </resources>

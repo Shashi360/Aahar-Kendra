@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="15dp"
+    tools:context=".parent.centerhead.CenterHeadDailyMealReportFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_centerhead_monthly_filter"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="5">
+
+        <Spinner
+            android:id="@+id/centerhead_filter_spinner_year"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/bg_spinner"
+            android:popupBackground="@color/white" />
+
+        <Spinner
+            android:id="@+id/centerhead_filter_spinner_month"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/bg_spinner"
+            android:popupBackground="@color/white" />
+
+        <Button
+            android:id="@+id/centerhead_filter_show_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:text="@string/show"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_center_head_monthly_meal_report"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_centerhead_monthly_filter"
+        android:layout_marginTop="20dp"
+        tools:listitem="@layout/centerhead_item_monthly_meal_report" />
+</RelativeLayout>

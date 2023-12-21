@@ -1,10 +1,14 @@
 import android.app.DatePickerDialog
+import android.content.ContentValues
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
+import com.app.aaharkendra.R
 import com.app.aaharkendra.databinding.FragmentCenterHeadDashboardBinding
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -14,6 +18,7 @@ class CenterHeadDashboardFragment : Fragment() {
 
     private var _binding: FragmentCenterHeadDashboardBinding? = null
     private val binding get() = _binding!!
+    private var selectedDays: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,9 +34,28 @@ class CenterHeadDashboardFragment : Fragment() {
         binding.dayMealDatePicker.setOnClickListener {
             showDatePicker()
         }
-        binding.sendButton.setOnClickListener {
+        binding.sendDayMealButton.setOnClickListener {
             sendDataFromDayMeal()
         }
+        val days = resources.getStringArray(R.array.days)
+        val daysAdapter = ArrayAdapter(requireContext(), R.layout.custom_spinner_layout, days)
+        binding.centerheadDashboardDaySpinner.adapter = daysAdapter
+        binding.centerheadDashboardDaySpinner.onItemSelectedListener =
+            object : AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>?,
+                    view: View?,
+                    position: Int,
+                    id: Long
+                ) {
+                    selectedDays = parent?.getItemAtPosition(position).toString()
+                    Log.d(ContentValues.TAG, "onItemSelected selectedDays : $selectedDays")
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>?) {
+                    // Handle case where nothing is selected if needed
+                }
+            }
     }
 
     private fun sendDataFromDayMeal() {

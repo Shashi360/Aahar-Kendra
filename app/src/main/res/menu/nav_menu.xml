@@ -7,4 +7,10 @@
     <item
         android:id="@+id/menu_meal_details"
         android:title="@string/meal_details" />
+    <item
+        android:id="@+id/daily_meal_report"
+        android:title="@string/daily_meal_report" />
+    <item
+        android:id="@+id/monthly_meal_report"
+        android:title="@string/monthly_meal_report" />
 </menu>
