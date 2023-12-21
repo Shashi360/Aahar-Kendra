@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!-- Day Meal Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Day Meal >"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dayMeal_datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Choose date"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Day Selector (Monday, Tuesday, etc.) -->
+        <Spinner
+            android:id="@+id/daySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_spinner"
+            android:entries="@array/days"
+            android:popupBackground="@color/white" />
+
+        <!-- Mode of Meal Selector (Day or Night) -->
+        <Spinner
+            android:id="@+id/modeOfMealSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_spinner"
+            android:entries="@array/mode_of_meal"
+            android:popupBackground="@color/white" />
+
+        <!-- Meal Consumed EditText -->
+        <EditText
+            android:id="@+id/mealConsumedEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/et_bottom_black"
+            android:hint="Meal Consumed" />
+
+        <!-- Meal Left Over EditText -->
+        <EditText
+            android:id="@+id/mealLeftOverEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/et_bottom_black"
+            android:hint="Meal Left Over" />
+
+        <!-- Send Button -->
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Send" />
+
+        <!-- Separator Line between Sections -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Night Meal Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Night Meal >"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <!-- Include fields for Night Meal similar to Day Meal -->
+
+</ScrollView>

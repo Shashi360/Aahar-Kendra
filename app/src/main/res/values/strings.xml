@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Aahar Kendra</string>
+    <string name="center_id">Center Id</string>
+    <string name="login_password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="login_pannel">Login Pannel</string>
+    <string name="aahar_kendra">Aahar Kendra</string>
+    <string name="welcome_to_aahar_kendra">Welcome to Aahar Kendra</string>
+
+    <string-array name="designations">
+        <item>- Choose Designation -</item>
+        <item>Admin</item>
+        <item>Center Head</item>
+        <item>Nodal Officer</item>
+    </string-array>
+    <string name="title_activity_admin">AdminActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="center_head_title">Welcome to Center Head</string>
+    <string name="center_head_title_fragment">Welcome to Center Head Dashboard Fragment</string>
+    <string name="dashboard_menu">Dashboard</string>
+    <string name="meal_details">Meal Details</string>
+
+    <string name="center_head_meal_details">Welcome to Center Head Meal Details</string>
+    <string name="center_head_dashboard">This is Center head dashboard</string>
+
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+    <string name="centerhead_dashboard">Dashboard</string>
+    <string name="centerhead_meal_details">Meal details</string>
+
+    <string-array name="days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+    <string-array name="mode_of_meal">
+        <item>Day Meal</item>
+        <item>Night Meal</item>
+    </string-array>
+</resources>
