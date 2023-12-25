@@ -7,51 +7,51 @@
     android:padding="8dp">
 
     <TextView
+        android:id="@+id/centerHeadItemMonthlySerial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SL No: 1"
         android:textColor="@color/black"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/centerHeadItemMonthlyDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Date: 2023-01-01"
         android:textColor="@color/black"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/centerHeadItemMonthlyDay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Day: Monday"
         android:textColor="@color/black"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/centerHeadItemMonthlyMealIndent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Meal Indent: Breakfast"
         android:textColor="@color/black"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/centerHeadItemMonthlyMealConsumption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Meal Consumption: 200"
         android:textColor="@color/black"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/centerHeadItemMonthlyMealLeft"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Left Over Meal: 50"
         android:textColor="@color/black"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/centerHeadItemMonthlyShift"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Shift: Day"
         android:textColor="@color/black"
         android:textStyle="bold" />
 </LinearLayout>

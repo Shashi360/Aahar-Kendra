@@ -6,6 +6,9 @@
     <string name="login_pannel">Login Pannel</string>
     <string name="aahar_kendra">Aahar Kendra</string>
     <string name="welcome_to_aahar_kendra">Welcome to Aahar Kendra</string>
+    <string name="center_head_dashboard_meal_entry">Meal Entry</string>
+    <string name="center_head_dashboard_daily_meal_report">Daily Meal Report</string>
+    <string name="center_head_dashboard_monthly_meal_report">Monthly Meal Report</string>
 
     <string-array name="designations">
         <item>- Choose Designation -</item>
@@ -34,7 +37,7 @@
     <string name="nav_close">Close</string>
 
     <string name="centerhead_dashboard">Dashboard</string>
-    <string name="centerhead_meal_details">Daily meal data entry</string>
+    <string name="centerhead_meal_details">Daily meal entry</string>
     <string name="centerhead_daily_meal_report">Daily meal report</string>
     <string name="centerhead_monthly_meal_report">Monthly meal report</string>
     <string name="day_meal">Day Meal</string>

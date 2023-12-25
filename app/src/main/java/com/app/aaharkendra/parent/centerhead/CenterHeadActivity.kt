@@ -1,6 +1,5 @@
 package com.app.aaharkendra.parent.centerhead
 
-import CenterHeadDashboardFragment
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -34,6 +33,14 @@ class CenterHeadActivity : AppCompatActivity() {
         toggle.isDrawerIndicatorEnabled = true
         supportActionBar?.title = getString(R.string.centerhead_dashboard)
         toggle.syncState()
+
+        // Set the default fragment when the activity is created
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.main_fragment_container, CenterHeadDashboardFragment())
+                .commit()
+            supportActionBar?.title = getString(R.string.centerhead_dashboard)
+        }
 
         binding.navigationView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {

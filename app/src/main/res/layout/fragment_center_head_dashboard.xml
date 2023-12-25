@@ -1,116 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp">
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="50dp">
+
 
     <TextView
-        android:id="@+id/tv_header"
+        android:id="@+id/center_head_dashboard_tv_meal_entry"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="120dp"
         android:background="@drawable/black_round_bg"
         android:gravity="center"
-        android:text="@string/day_meal"
+        android:text="@string/center_head_dashboard_meal_entry"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/center_head_dashboard_tv_daily_report"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/sendDayMealButton"
-        android:layout_below="@+id/tv_header"
-        android:background="@color/white"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/black_round_bg"
         android:gravity="center"
-        android:orientation="vertical"
-        android:padding="20dp"
-        tools:ignore="UselessParent">
+        android:text="@string/center_head_dashboard_daily_meal_report"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
-        <!-- Day Meal Section -->
-        <TextView
-            android:id="@+id/dayMeal_datePicker"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="@string/select_date"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <!-- Day Selector (Monday, Tuesday, etc.) -->
-        <Spinner
-            android:id="@+id/centerhead_dashboard_day_spinner"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/bg_spinner"
-            android:entries="@array/days"
-            android:popupBackground="@color/white" />
-
-        <!--        &lt;!&ndash; Mode of Meal Selector (Day or Night) &ndash;&gt;-->
-        <!--        <Spinner-->
-        <!--            android:id="@+id/modeOfMealSpinner"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="50dp"-->
-        <!--            android:background="@drawable/bg_spinner"-->
-        <!--            android:entries="@array/mode_of_meal"-->
-        <!--            android:popupBackground="@color/white" />-->
-
-        <!-- Meal Consumed EditText -->
-        <EditText
-            android:id="@+id/mealConsumedEditText"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/et_bottom_black"
-            android:hint="@string/meal_consumed"
-            android:textColor="@color/black" />
-
-        <!-- Meal Left Over EditText -->
-        <EditText
-            android:id="@+id/mealLeftOverEditText"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/et_bottom_black"
-            android:hint="@string/meal_left_over"
-            android:textColor="@color/black" />
-
-        <!-- Send Button -->
-
-
-        <!--        &lt;!&ndash; Separator Line between Sections &ndash;&gt;-->
-        <!--        <View-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="1dp"-->
-        <!--            android:layout_marginTop="16dp"-->
-        <!--            android:background="@android:color/darker_gray" />-->
-
-        <!--        &lt;!&ndash; Night Meal Section &ndash;&gt;-->
-        <!--        <TextView-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="50dp"-->
-        <!--            android:layout_marginTop="16dp"-->
-        <!--            android:layout_marginBottom="8dp"-->
-        <!--            android:background="@drawable/black_round_bg"-->
-        <!--            android:gravity="center"-->
-        <!--            android:text="@string/night_meal"-->
-        <!--            android:textSize="25sp"-->
-        <!--            android:textStyle="bold" />-->
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/sendDayMealButton"
+    <TextView
+        android:id="@+id/center_head_dashboard_tv_monthly_report"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/black_round_bg"
         android:gravity="center"
-        android:text="@string/send_data" />
+        android:text="@string/center_head_dashboard_monthly_meal_report"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
-
-    <!-- Include fields for Night Meal similar to Day Meal -->
-
-</RelativeLayout>
+</LinearLayout>
