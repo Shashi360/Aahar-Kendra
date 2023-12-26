@@ -29,22 +29,27 @@
     <string name="meal_details">Daily meal data entry</string>
     <string name="daily_meal_report">Daily meal report</string>
     <string name="monthly_meal_report">Monthly meal report</string>
+    <string name="logout">Logout</string>
 
     <string name="center_head_meal_details">Welcome to Center Head Meal Details</string>
     <string name="center_head_dashboard">This is Center head dashboard</string>
+    <string name="nodal_dashboard_menu">This is Nodal Officer dashboard</string>
 
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
 
     <string name="centerhead_dashboard">Dashboard</string>
+    <string name="nodal_dashboard">Dashboard</string>
     <string name="centerhead_meal_details">Daily meal entry</string>
+    <string name="nodal_daily_meal_details">Daily meal details</string>
+    <string name="nodal_monthly_meal_details">Monthly meal details</string>
     <string name="centerhead_daily_meal_report">Daily meal report</string>
     <string name="centerhead_monthly_meal_report">Monthly meal report</string>
-    <string name="day_meal">Day Meal</string>
-    <string name="select_date">Select date here</string>
+    <string name="meal_entry">Enter meal details </string>
+    <string name="select_date">Click here to select date</string>
     <string name="meal_consumed">Meal Consumed</string>
     <string name="meal_left_over">Meal Left Over</string>
-    <string name="send_data">Save Day Meal</string>
+    <string name="send_data">Save Meal</string>
     <string name="night_meal">Night Meal</string>
 
     <string-array name="days">

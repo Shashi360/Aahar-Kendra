@@ -5,22 +5,9 @@
     android:layout_height="match_parent"
     android:padding="10dp">
 
-    <TextView
-        android:id="@+id/tv_header"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/black_round_bg"
-        android:gravity="center"
-        android:text="@string/day_meal"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/sendDayMealButton"
-        android:layout_below="@+id/tv_header"
         android:background="@color/white"
         android:gravity="center"
         android:orientation="vertical"
@@ -32,6 +19,7 @@
             android:id="@+id/dayMeal_datePicker"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@drawable/black_round_bg"
             android:gravity="center"
             android:text="@string/select_date"
             android:textColor="@color/black"
@@ -43,6 +31,7 @@
             android:id="@+id/centerhead_dashboard_day_spinner"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/bg_spinner"
             android:entries="@array/days"
             android:popupBackground="@color/white" />
@@ -64,6 +53,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/et_bottom_black"
             android:hint="@string/meal_consumed"
+            android:inputType="phone"
             android:textColor="@color/black" />
 
         <!-- Meal Left Over EditText -->
@@ -74,34 +64,13 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/et_bottom_black"
             android:hint="@string/meal_left_over"
+            android:inputType="phone"
             android:textColor="@color/black" />
-
-        <!-- Send Button -->
-
-
-        <!--        &lt;!&ndash; Separator Line between Sections &ndash;&gt;-->
-        <!--        <View-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="1dp"-->
-        <!--            android:layout_marginTop="16dp"-->
-        <!--            android:background="@android:color/darker_gray" />-->
-
-        <!--        &lt;!&ndash; Night Meal Section &ndash;&gt;-->
-        <!--        <TextView-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="50dp"-->
-        <!--            android:layout_marginTop="16dp"-->
-        <!--            android:layout_marginBottom="8dp"-->
-        <!--            android:background="@drawable/black_round_bg"-->
-        <!--            android:gravity="center"-->
-        <!--            android:text="@string/night_meal"-->
-        <!--            android:textSize="25sp"-->
-        <!--            android:textStyle="bold" />-->
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/sendDayMealButton"
+        android:id="@+id/centerhead_sendDayMealButton"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
@@ -110,7 +79,5 @@
         android:gravity="center"
         android:text="@string/send_data" />
 
-
-    <!-- Include fields for Night Meal similar to Day Meal -->
 
 </RelativeLayout>

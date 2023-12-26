@@ -3,7 +3,6 @@ package com.app.aaharkendra.parent.centerhead
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.app.aaharkendra.databinding.CenterheadItemDayMealReportBinding
 import com.app.aaharkendra.databinding.CenterheadItemMonthlyMealReportBinding
 
 class CenterHeadMonthlyMealReportAdapter(private val dataList: List<CenterHeadMonthlyMealReportItem>) :

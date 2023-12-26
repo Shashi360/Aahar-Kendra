@@ -65,7 +65,6 @@ class CenterHeadMonthlyMealReportFragment : Fragment() {
                 }
             }
 
-        // Create ArrayAdapter for months and set it to the monthSpinner
         val months = resources.getStringArray(R.array.months)
         val monthAdapter = ArrayAdapter(requireContext(), R.layout.custom_spinner_layout, months)
         binding.centerheadFilterSpinnerMonth.adapter = monthAdapter
@@ -78,7 +77,7 @@ class CenterHeadMonthlyMealReportFragment : Fragment() {
                     id: Long
                 ) {
                     selectedMonth = parent?.getItemAtPosition(position).toString()
-                    Log.d(ContentValues.TAG, "onItemSelected selectedMonth: $selectedMonth")
+                    Log.d(getTAG(), "onItemSelected selectedMonth: $selectedMonth")
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -95,6 +94,8 @@ class CenterHeadMonthlyMealReportFragment : Fragment() {
     }
 
     companion object {
-
+        fun getTAG(): String {
+            return CenterHeadMonthlyMealReportFragment::class.java.simpleName
+        }
     }
 }

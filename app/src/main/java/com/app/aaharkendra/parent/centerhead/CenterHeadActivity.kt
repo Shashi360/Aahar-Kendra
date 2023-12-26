@@ -1,5 +1,6 @@
 package com.app.aaharkendra.parent.centerhead
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -8,6 +9,7 @@ import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.app.aaharkendra.R
 import com.app.aaharkendra.databinding.ActivityCenterHeadBinding
+import com.app.aaharkendra.parent.ui.LoginActivity
 
 class CenterHeadActivity : AppCompatActivity() {
 
@@ -48,22 +50,35 @@ class CenterHeadActivity : AppCompatActivity() {
                     CenterHeadDashboardFragment(),
                     R.string.centerhead_dashboard
                 )
+
                 R.id.menu_meal_details -> replaceFragmentAndSetTitle(
                     CenterHeadMealDetailsFragment(),
                     R.string.centerhead_meal_details
                 )
+
                 R.id.daily_meal_report -> replaceFragmentAndSetTitle(
                     CenterHeadDailyMealReportFragment(),
                     R.string.centerhead_daily_meal_report
                 )
+
                 R.id.monthly_meal_report -> replaceFragmentAndSetTitle(
                     CenterHeadMonthlyMealReportFragment(),
                     R.string.centerhead_monthly_meal_report
                 )
+
+                R.id.logout -> {
+                    val intent = Intent(this, LoginActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+
                 else -> false
             }
         }
     }
+
     private fun replaceFragmentAndSetTitle(fragment: Fragment, titleResId: Int): Boolean {
         supportFragmentManager.beginTransaction()
             .replace(R.id.main_fragment_container, fragment)
@@ -81,6 +96,12 @@ class CenterHeadActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         binding.drawerLayout.openDrawer(binding.navigationView)
         return true
+    }
+
+    private fun <T : AppCompatActivity> startActivityAndFinish(activityClass: Class<T>) {
+        val intent = Intent(this, activityClass)
+        startActivity(intent)
+        finish()
     }
 
     // override the onBackPressed() function to close the Drawer when the back button is clicked

@@ -1,7 +1,6 @@
 package com.app.aaharkendra.parent.centerhead
 
 import android.app.DatePickerDialog
-import android.content.ContentValues
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.app.aaharkendra.R
 import com.app.aaharkendra.databinding.FragmentCenterHeadMealDetailsBinding
@@ -36,7 +36,7 @@ class CenterHeadMealDetailsFragment : Fragment() {
         binding.dayMealDatePicker.setOnClickListener {
             showDatePicker()
         }
-        binding.sendDayMealButton.setOnClickListener {
+        binding.centerheadSendDayMealButton.setOnClickListener {
             sendDataFromDayMeal()
         }
         val days = resources.getStringArray(R.array.days)
@@ -51,7 +51,7 @@ class CenterHeadMealDetailsFragment : Fragment() {
                     id: Long
                 ) {
                     selectedDays = parent?.getItemAtPosition(position).toString()
-                    Log.d(ContentValues.TAG, "onItemSelected selectedDays : $selectedDays")
+                    Log.d(getTAG(), "onItemSelected selectedDays : $selectedDays")
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -60,19 +60,47 @@ class CenterHeadMealDetailsFragment : Fragment() {
             }
     }
 
+    private fun validateInput(
+        value: String,
+        emptyErrorMessage: String
+    ): Boolean {
+        if (value.isEmpty()) {
+            showToast(emptyErrorMessage)
+            return false
+        }
+        return true
+    }
+
     private fun sendDataFromDayMeal() {
         // Retrieve data from the relevant views
         val selectedDate = binding.dayMealDatePicker.text.toString().trim()
-        val selectedDay = ""
-        val selectedModeOfMeal = ""
-        val mealConsumed = ""
-        val mealLeftOver = ""
+        val selectedDay = selectedDays
+        val selectedModeOfMeal = binding.centerheadDashboardDaySpinner.selectedItem.toString()
+        val mealConsumed = binding.mealConsumedEditText.text.toString().trim()
+        val mealLeftOver = binding.mealLeftOverEditText.text.toString().trim()
 
-        Log.d("DayMealData", "Selected Date: $selectedDate")
-        Log.d("DayMealData", "Selected Day: $selectedDay")
-        Log.d("DayMealData", "Mode of Meal: $selectedModeOfMeal")
-        Log.d("DayMealData", "Meal Consumed: $mealConsumed")
-        Log.d("DayMealData", "Meal Left Over: $mealLeftOver")
+        Log.d(getTAG(), "Selected Date: $selectedDate")
+        Log.d(getTAG(), "Selected Day: $selectedDay")
+        Log.d(getTAG(), "Mode of Meal: $selectedModeOfMeal")
+        Log.d(getTAG(), "Meal Consumed: $mealConsumed")
+        Log.d(getTAG(), "Meal Left Over: $mealLeftOver")
+
+        // Perform validation checks
+        if (!validateInput(selectedDay, "Please select a day.") ||
+            !validateInput(selectedModeOfMeal, "Please select a mode of meal.") ||
+            !validateInput(mealConsumed, "Please enter the meal consumed value.") ||
+            !validateInput(mealLeftOver, "Please enter the left-over meal value.")
+        ) {
+            return
+        }
+
+        // Reset input fields
+        binding.dayMealDatePicker.text = resources.getString(R.string.select_date)
+        binding.centerheadDashboardDaySpinner.setSelection(0)
+        binding.mealConsumedEditText.text = null
+        binding.mealLeftOverEditText.text = null
+
+        showToast("Data sent successfully!")
     }
 
 
@@ -93,12 +121,18 @@ class CenterHeadMealDetailsFragment : Fragment() {
         datePickerDialog.show()
     }
 
+    private fun showToast(message: String) {
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
 
     companion object {
-        // Your companion object, if needed
+        fun getTAG(): String {
+            return CenterHeadMealDetailsFragment::class.java.simpleName
+        }
     }
 }

@@ -88,7 +88,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun loginNodalOfficer(centerId: String, password: String) {
 //        val validCenterId = "KHO/MUN/BHU/JAYDEVVIHAR"
-        val validCenterId = "officer"
+        val validCenterId = "nodal"
         if (centerId == validCenterId && password == "123") {
             showToast("Nodal Officer Login Successful")
             startActivityAndFinish(NodalOfficerActivity::class.java)

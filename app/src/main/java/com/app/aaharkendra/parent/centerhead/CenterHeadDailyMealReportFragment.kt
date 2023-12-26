@@ -11,6 +11,7 @@ import com.app.aaharkendra.databinding.FragmentCenterHeadDailyMealReportBinding
 class CenterHeadDailyMealReportFragment : Fragment() {
     private var _binding: FragmentCenterHeadDailyMealReportBinding? = null
     private val binding get() = _binding!!
+    private lateinit var adapter: CenterHeadDailyMealReportAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,7 +24,6 @@ class CenterHeadDailyMealReportFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // Sample data
         val items = listOf(
             CenterHeadDailyMealReportItem("1", "2023-01-01", "Monday", "Breakfast", "100", "10", "Morning"),
             CenterHeadDailyMealReportItem("2", "2023-01-02", "Tuesday", "lunch", "50", "20", "Afternoon"),
@@ -33,10 +33,9 @@ class CenterHeadDailyMealReportFragment : Fragment() {
             // Add more items as needed
         )
 
-        val adapter = CenterHeadDailyMealReportAdapter(items)
+        adapter = CenterHeadDailyMealReportAdapter(items)
         binding.rvCenterHeadDailyMealReport.adapter = adapter
         binding.rvCenterHeadDailyMealReport.layoutManager = LinearLayoutManager(requireContext())
-
 
     }
 
